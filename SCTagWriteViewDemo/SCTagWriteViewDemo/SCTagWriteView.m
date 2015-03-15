@@ -390,7 +390,7 @@
     _inputView.backgroundColor = [UIColor clearColor];
     _inputView.textColor = _tagBackgroundColor;
     
-    if(_tagViews.count >= 10)
+    if(_tagViews.count >= maxTagNumber)
     {
         _inputView.hidden=YES;
     }

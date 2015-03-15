@@ -119,7 +119,7 @@
 //点击cell
 - (void) gridView:(UIGridView *)grid didSelectRowAt:(int)rowIndex AndColumnAt:(int)colIndex
 {
-    if(_tagWriteView.tagViews.count >=10)
+    if(_tagWriteView.tagViews.count >=maxTagNumber)
     {
         return;
     }

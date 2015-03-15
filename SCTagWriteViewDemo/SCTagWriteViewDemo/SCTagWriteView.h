@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define maxTagNumber 10
 
 @protocol SCTagWriteViewDelegate;
 
