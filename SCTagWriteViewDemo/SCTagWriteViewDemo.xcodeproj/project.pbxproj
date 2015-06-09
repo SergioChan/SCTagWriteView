@@ -23,11 +23,11 @@
 		228CAD931AB45CBE008782B2 /* delete_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 228CAD8E1AB45CBE008782B2 /* delete_4.png */; };
 		228CAD941AB45CBE008782B2 /* delete_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 228CAD8F1AB45CBE008782B2 /* delete_5.png */; };
 		228CAD971AB45CF8008782B2 /* UIGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 228CAD961AB45CF8008782B2 /* UIGridView.m */; };
-		228CAD9B1AB45D31008782B2 /* TUCommonTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 228CAD9A1AB45D31008782B2 /* TUCommonTagCell.m */; };
 		228CAD9E1AB45D59008782B2 /* UIGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 228CAD9D1AB45D59008782B2 /* UIGridViewCell.m */; };
 		228CADA11AB45D83008782B2 /* BVUnderlineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 228CADA01AB45D83008782B2 /* BVUnderlineButton.m */; };
 		228CADA41AB45DC0008782B2 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 228CADA31AB45DC0008782B2 /* UIViewExt.m */; };
 		228CADA71AB45F2D008782B2 /* UIGridViewRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 228CADA61AB45F2D008782B2 /* UIGridViewRow.m */; };
+		228CADAF1AB528FA008782B2 /* SCCommonTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 228CADAE1AB528FA008782B2 /* SCCommonTagCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +69,6 @@
 		228CAD951AB45CF8008782B2 /* UIGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGridView.h; sourceTree = "<group>"; };
 		228CAD961AB45CF8008782B2 /* UIGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGridView.m; sourceTree = "<group>"; };
 		228CAD981AB45D09008782B2 /* UIGridViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGridViewDelegate.h; sourceTree = "<group>"; };
-		228CAD991AB45D31008782B2 /* TUCommonTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUCommonTagCell.h; sourceTree = "<group>"; };
-		228CAD9A1AB45D31008782B2 /* TUCommonTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUCommonTagCell.m; sourceTree = "<group>"; };
 		228CAD9C1AB45D59008782B2 /* UIGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGridViewCell.h; sourceTree = "<group>"; };
 		228CAD9D1AB45D59008782B2 /* UIGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGridViewCell.m; sourceTree = "<group>"; };
 		228CAD9F1AB45D83008782B2 /* BVUnderlineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BVUnderlineButton.h; sourceTree = "<group>"; };
@@ -79,6 +77,8 @@
 		228CADA31AB45DC0008782B2 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		228CADA51AB45F2D008782B2 /* UIGridViewRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGridViewRow.h; sourceTree = "<group>"; };
 		228CADA61AB45F2D008782B2 /* UIGridViewRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGridViewRow.m; sourceTree = "<group>"; };
+		228CADAD1AB528FA008782B2 /* SCCommonTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCommonTagCell.h; sourceTree = "<group>"; };
+		228CADAE1AB528FA008782B2 /* SCCommonTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCommonTagCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +124,6 @@
 				228CADAB1AB46163008782B2 /* Extension */,
 				228CADA91AB46138008782B2 /* ThirdParty */,
 				228CADA81AB46113008782B2 /* UIGridView */,
-				228CAD991AB45D31008782B2 /* TUCommonTagCell.h */,
-				228CAD9A1AB45D31008782B2 /* TUCommonTagCell.m */,
 				228CAD571AB3D97C008782B2 /* AppDelegate.h */,
 				228CAD581AB3D97C008782B2 /* AppDelegate.m */,
 				228CAD601AB3D97C008782B2 /* Main.storyboard */,
@@ -135,6 +133,8 @@
 				228CAD7D1AB3DCC2008782B2 /* SCTagWriteDemoViewController.m */,
 				228CAD7F1AB45B58008782B2 /* SCTagWriteView.h */,
 				228CAD801AB45B58008782B2 /* SCTagWriteView.m */,
+				228CADAD1AB528FA008782B2 /* SCCommonTagCell.h */,
+				228CADAE1AB528FA008782B2 /* SCCommonTagCell.m */,
 			);
 			path = SCTagWriteViewDemo;
 			sourceTree = "<group>";
@@ -322,7 +322,6 @@
 				228CAD841AB45C1B008782B2 /* XHMessageTextView.m in Sources */,
 				228CAD871AB45C46008782B2 /* UIPlaceHolderTextView.m in Sources */,
 				228CAD591AB3D97C008782B2 /* AppDelegate.m in Sources */,
-				228CAD9B1AB45D31008782B2 /* TUCommonTagCell.m in Sources */,
 				228CADA71AB45F2D008782B2 /* UIGridViewRow.m in Sources */,
 				228CADA41AB45DC0008782B2 /* UIViewExt.m in Sources */,
 				228CAD561AB3D97C008782B2 /* main.m in Sources */,
@@ -330,6 +329,7 @@
 				228CADA11AB45D83008782B2 /* BVUnderlineButton.m in Sources */,
 				228CAD811AB45B58008782B2 /* SCTagWriteView.m in Sources */,
 				228CAD971AB45CF8008782B2 /* UIGridView.m in Sources */,
+				228CADAF1AB528FA008782B2 /* SCCommonTagCell.m in Sources */,
 				228CAD9E1AB45D59008782B2 /* UIGridViewCell.m in Sources */,
 				228CAD8A1AB45C87008782B2 /* NSString+Helper.m in Sources */,
 			);

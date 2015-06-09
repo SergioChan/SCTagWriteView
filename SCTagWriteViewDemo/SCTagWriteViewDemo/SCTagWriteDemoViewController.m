@@ -10,27 +10,46 @@
 #import "SCTagWriteView.h"
 #import "UIGridView.h"
 #import "UIGridViewDelegate.h"
-#import "TUCommonTagCell.h"
+#import "SCCommonTagCell.h"
 #import "BVUnderlineButton.h"
 #import "UIViewExt.h"
 
 @interface SCTagWriteDemoViewController ()<SCTagWriteViewDelegate,UIGridViewDelegate>
 - (void) initGridView;
 @property (strong, nonatomic) UIGridView *tagView;
-@property (strong, nonatomic) IBOutlet SCTagWriteView *tagWriteView;
+@property (strong, nonatomic) SCTagWriteView *tagWriteView;
 @property (strong, nonatomic) NSArray *tagTitles;
 @property (nonatomic, strong) NSMutableArray *tagsArray;
 
-@property (strong, nonatomic) IBOutlet BVUnderlineButton *changePIButton;
+@property (strong, nonatomic) BVUnderlineButton *changePIButton;
 @property (strong, nonatomic) IBOutlet UILabel *commonTagLabel;
 @property (nonatomic, strong) NSMutableArray *commonTags;
 @end
 
 @implementation SCTagWriteDemoViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setTranslucent:NO];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor=[UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1];
+    
+    self.tagWriteView = [[SCTagWriteView alloc]initWithFrame:CGRectMake(10.0f, 10.0f, [UIScreen mainScreen].bounds.size.width-20.0f, 280.0f)];
+    [self.view addSubview:self.tagWriteView];
+    
+    self.changePIButton = [[BVUnderlineButton alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-70.0f, _commonTagLabel.top -3.0f, 60.0f, 30.0f)];
+    [self.changePIButton setTitle:@"换一批" forState:UIControlStateNormal];
+    [self.changePIButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    self.changePIButton.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+    [self.view addSubview:self.changePIButton];
+    NSLog(@"what : %f,%f",_tagWriteView.frame.size.width,_tagWriteView.frame.size.height);
+    ;
+    
     _tagWriteView.allowToUseSingleSpace = YES;
     _tagWriteView.delegate = self;
     _tagWriteView.layer.cornerRadius=3.0f;
@@ -65,7 +84,7 @@
 }
 - (void) initGridView
 {
-    _tagView=[[UIGridView alloc] initWithFrame:CGRectMake(10.0f, _commonTagLabel.bottom+10.0f, 300.0f, [UIScreen mainScreen].bounds.size.height-64.0F-_tagWriteView.height-_commonTagLabel.height-30.0)];
+    _tagView=[[UIGridView alloc] initWithFrame:CGRectMake(10.0f, _commonTagLabel.bottom+10.0f, [UIScreen mainScreen].bounds.size.width-20.0f, [UIScreen mainScreen].bounds.size.height-64.0f-_tagWriteView.height-_commonTagLabel.height-30.0f)];
     _tagView.uiGridViewDelegate=self;
     _tagView.backgroundColor=[UIColor clearColor];
     _tagView.tag=10;
@@ -80,7 +99,7 @@
 //每一个gridcell的宽度
 - (CGFloat) gridView:(UIGridView *)grid widthForColumnAt:(int)columnIndex
 {
-    return 75.0;
+    return ([UIScreen mainScreen].bounds.size.width-20.0f)/4;
     
 }
 //gridcell的高度
@@ -106,10 +125,10 @@
 //生成gridcell
 - (UIGridViewCell *) gridView:(UIGridView *)grid cellForRowAt:(int)rowIndex AndColumnAt:(int)columnIndex
 {
-    TUCommonTagCell *cell = (TUCommonTagCell *)[grid dequeueReusableCell];
+    SCCommonTagCell *cell = (SCCommonTagCell *)[grid dequeueReusableCell];
     NSString *tagText=_tagTitles[columnIndex+[self numberOfColumnsOfGridView:grid]*(rowIndex)];
     if (cell==nil) {
-        cell = [[TUCommonTagCell alloc] init];
+        cell = [[SCCommonTagCell alloc] init];
     }
     cell.tagText=tagText;
     cell.backgroundColor=[UIColor clearColor];

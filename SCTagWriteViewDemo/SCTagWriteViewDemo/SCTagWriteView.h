@@ -23,6 +23,9 @@
 @property (nonatomic, assign) CGFloat tagGap;
 
 @property (nonatomic, strong) UIScrollView *scrollView;
+
+@property (nonatomic, strong) NSMutableArray *tagsMade;
+
 @property (nonatomic, strong) NSMutableArray *tagViews;
 @property (nonatomic, strong) NSMutableArray *deleteButtons;
 //

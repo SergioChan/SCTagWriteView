@@ -1,15 +1,15 @@
 //
-//  TUCommonTagCell.m
-//  tataUFO
+//  SCCommonTagCell.m
+//  SCTagWriteViewDemo
 //
-//  Created by chen Yuheng on 15-3-13.
-//  Copyright (c) 2015年 tataUFO.com. All rights reserved.
+//  Created by chen Yuheng on 15-3-15.
+//  Copyright (c) 2015年 chen Yuheng. All rights reserved.
 //
 
-#import "TUCommonTagCell.h"
-#import <QuartzCore/QuartzCore.h> 
+#import "SCCommonTagCell.h"
+#import <QuartzCore/QuartzCore.h>
 
-@implementation TUCommonTagCell
+@implementation SCCommonTagCell
 
 - (id)init {
     

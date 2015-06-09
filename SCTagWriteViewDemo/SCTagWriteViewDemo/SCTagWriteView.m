@@ -16,8 +16,6 @@
 @property (nonatomic, strong) XHMessageTextView *inputView;
 @property (nonatomic, strong) UIButton *deleteButton;
 
-@property (nonatomic, strong) NSMutableArray *tagsMade;
-
 @property (nonatomic, assign) BOOL readyToDelete;
 @property (nonatomic, assign) BOOL readyToFinishMaking;
 
